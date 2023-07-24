@@ -8,6 +8,8 @@ allow platform_app vendor_xdsp_device:chr_file r_file_perms;
 
 allow platform_app vendor_sysfs_msm_subsys:dir search;
 
+allow platform_app selinuxfs:file r_file_perms;
+
 # OPlusExtras
 r_dir_file(platform_app, sysfs_dm)
 
