@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package co.aospa.dolby.xiaomi
+package co.aospa.dolby.oplus
 
 import android.media.audiofx.AudioEffect
 import android.util.Log
-import co.aospa.dolby.xiaomi.DolbyConstants.Companion.dlog
-import co.aospa.dolby.xiaomi.DolbyConstants.DsParam
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import co.aospa.dolby.oplus.DolbyConstants.Companion.dlog
+import co.aospa.dolby.oplus.DolbyConstants.DsParam
 import java.util.UUID
 
 class DolbyAudioEffect(priority: Int, audioSession: Int) : AudioEffect(
