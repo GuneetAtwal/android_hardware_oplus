@@ -34,4 +34,8 @@ public class OplusFeatureConfigManager {
     public interface OnFeatureObserver {
         default void onFeatureUpdate(List<String> features) {}
     }
+
+    public boolean hasFeature(String name) {
+        return false;
+    }
 }
