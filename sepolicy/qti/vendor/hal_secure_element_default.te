@@ -1,3 +1,7 @@
+add_service(hal_secure_element_default, hal_secure_element_extend_service)
+
+hal_client_domain(hal_secure_element_default, vendor_hal_oplus_commondcs)
+
 allow hal_secure_element_default nfc_device:chr_file rw_file_perms;
 
 allow hal_secure_element_default self:netlink_socket create_socket_perms_no_ioctl;
@@ -7,3 +11,5 @@ allow hal_secure_element_default nfc_device:chr_file { getattr };
 allow hal_secure_element_default mnt_vendor_file:dir search;
 
 get_prop(hal_secure_element_default, system_oplus_project_prop)
+
+set_prop(hal_secure_element_default, vendor_oplus_se_prop)
