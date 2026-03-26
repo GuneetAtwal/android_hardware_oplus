@@ -1,4 +1,11 @@
+# Allow hal_nfc_default to add and find hal_nxpnfc_hwservice
+add_hwservice(hal_nfc_default, hal_nxpnfc_hwservice)
+add_hwservice(hal_nfc_default, hal_nxpese_hwservice)
+allow hal_nfc_default hal_nxpnfc_hwservice:hwservice_manager find;
+allow hal_nfc_default hal_nxpese_hwservice:hwservice_manager find;
+
 allow hal_nfc_default vendor_nfc_vendor_data_file:dir search;
 
 set_prop(hal_nfc_default, vendor_nfc_nq_prop)
 allow hal_nfc_default vendor_data_file:dir { search add_name };
+allow hal_nfc_default vendor_data_file:file { create getattr open read write };
